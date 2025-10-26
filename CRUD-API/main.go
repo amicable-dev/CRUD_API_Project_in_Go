@@ -36,6 +36,15 @@ func deleteMovie(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 }
+func getMovie(w http.ResponseWriter, r *http.Request) {
+
+}
+func createMovie(w http.ResponseWriter, r *http.Request) {
+
+}
+func updateMovie(w http.ResponseWriter, r *http.Request) {
+
+}
 
 func main() {
 	r := mux.NewRouter()
@@ -44,7 +53,7 @@ func main() {
 
 	r.HandleFunc("/movies", getMovies).Methods("GET")
 	r.HandleFunc("/movies/{id}", getMovie).Methods("GET")
-	r.HandleFunc("/movies", createMOvie).Methods("POST")
+	r.HandleFunc("/movies", createMovie).Methods("POST")
 	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
 	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
 	fmt.Println("Starting Post at:8000")
